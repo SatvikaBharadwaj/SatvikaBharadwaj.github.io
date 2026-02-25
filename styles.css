@@ -37,6 +37,10 @@ body {
   overflow-x: hidden;
 }
 /* HERO COVER (image only) */
+/* ============================================
+   HERO COVER (full image visible + no awkward whitespace)
+   ============================================ */
+
 .hero-cover{
   position: relative;
   height: 55vh;
@@ -44,55 +48,70 @@ body {
   width: 100%;
   overflow: hidden;
   background-color: var(--primary);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
-/* Full image visible (no crop) */
+/* Blurred backdrop uses the same image to fill wide screens */
+.hero-cover::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: url("pages/website_hero_section.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(16px) saturate(0.95) contrast(1.05);
+  transform: scale(1.08);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+/* Soft dark overlay so name stays readable */
+.hero-cover::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 53, 87, 0.35) 0%,
+    rgba(29, 53, 87, 0.10) 55%,
+    rgba(29, 53, 87, 0.45) 100%
+  );
+  z-index: 1;
+  pointer-events:none;
+}
+
+/* Foreground image: show full image (no crop) */
 .hero-cover .hero-image{
+  position: relative;
+  z-index: 2;
+
   height: 100%;
   width: auto;
   object-fit: contain;
   display: block;
 
-  /* Faster + less awkward than sliding across blank space */
-  animation: floatSubtle 6s ease-in-out infinite;
+  /* Gentle motion that doesn't "slide into blank space" */
+  animation: floatSubtle 5s ease-in-out infinite;
 }
 
-/* This keeps the full image visible while adding motion */
 @keyframes floatSubtle{
-  0%   { transform: translateX(0px) translateY(0px); }
-  50%  { transform: translateX(-10px) translateY(4px); }
-  100% { transform: translateX(0px) translateY(0px); }
+  0%   { transform: translateX(0px); }
+  50%  { transform: translateX(-10px); }
+  100% { transform: translateX(0px); }
 }
 
-/* Readability overlay */
-.hero-cover::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(29, 53, 87, 0.30) 0%,
-    rgba(29, 53, 87, 0.10) 50%,
-    rgba(29, 53, 87, 0.35) 100%
-  );
-  pointer-events: none;
-}
-
-/* Name pinned top-left */
+/* Name pinned top-left (fixes the "messed up" look) */
 .hero-name{
   position: absolute;
-  top: 22px;
-  left: 28px;
-  z-index: 2;
+  top: 18px;
+  left: 22px;
+  z-index: 3;
 
-  font-family: var(--font-display);
+  font-family: var(--font-display, system-ui);
   font-size: clamp(1.5rem, 2.4vw, 2.2rem);
-  font-weight: 500;
-  letter-spacing: 0.3px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 
   color: var(--bg-primary);
   text-decoration: none;
@@ -103,6 +122,10 @@ body {
   background: rgba(29, 53, 87, 0.35);
   border: 1px solid rgba(184, 193, 236, 0.35);
   backdrop-filter: blur(10px);
+}
+
+.hero-name:hover{
+  border-color: rgba(250, 212, 192, 0.65);
 }
 /* ============================================
    LAYOUT & CONTAINERS
