@@ -53,13 +53,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .marquee-track {
   display: flex;
   height: 100%;
-  width: auto;
+  width: 100%;
   animation: none;
-  gap: -50px;
+  gap: 0;
   align-items: center;
+  justify-content: center;
 }
 
 .marquee-track img {
