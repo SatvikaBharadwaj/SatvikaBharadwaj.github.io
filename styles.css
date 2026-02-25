@@ -36,34 +36,74 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-/* ============================================
-   HERO: half-page cover image + name top-left
-   ============================================ */
-.hero {
+/* HERO COVER (image only) */
+.hero-cover{
   position: relative;
   height: 55vh;
   min-height: 480px;
+  width: 100%;
   overflow: hidden;
   background-color: var(--primary);
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Full image visible */
-.hero-image {
-  object-fit: contain;  /* KEY: shows full image */
-  width: auto;          /* keeps aspect ratio */
-  height: 100%;         /* fit to hero height */
-  animation: slowPan 12s linear infinite;
+/* Full image visible (no crop) */
+.hero-cover .hero-image{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+
+  /* Faster + less awkward than sliding across blank space */
+  animation: floatSubtle 6s ease-in-out infinite;
 }
 
-/* Faster movement */
-@keyframes slowPan {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-8%); }
+/* This keeps the full image visible while adding motion */
+@keyframes floatSubtle{
+  0%   { transform: translateX(0px) translateY(0px); }
+  50%  { transform: translateX(-10px) translateY(4px); }
+  100% { transform: translateX(0px) translateY(0px); }
 }
 
+/* Readability overlay */
+.hero-cover::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 53, 87, 0.30) 0%,
+    rgba(29, 53, 87, 0.10) 50%,
+    rgba(29, 53, 87, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+/* Name pinned top-left */
+.hero-name{
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  z-index: 2;
+
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  color: var(--bg-primary);
+  text-decoration: none;
+
+  padding: 0.55rem 0.85rem;
+  border-radius: 12px;
+
+  background: rgba(29, 53, 87, 0.35);
+  border: 1px solid rgba(184, 193, 236, 0.35);
+  backdrop-filter: blur(10px);
+}
 /* ============================================
    LAYOUT & CONTAINERS
    ============================================ */
