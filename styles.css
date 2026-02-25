@@ -39,27 +39,40 @@ body {
 /* ============================================
    HERO: half-page cover image + name top-left
    ============================================ */
+/* ============================================
+   HERO: half-page animated cover
+   ============================================ */
 
 .hero {
   position: relative;
-  height: 50vh;                 /* half page */
-  min-height: 420px;            /* keeps it tall enough on laptops */
+  height: 55vh;          /* slightly taller */
+  min-height: 480px;
   width: 100%;
   overflow: hidden;
-  background-color: var(--primary); /* fallback if image doesn't load */
+  background-color: var(--primary);
 }
 
-/* Full-bleed image */
+/* Animated image */
 .hero-image {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 110%;           /* slightly larger so movement doesn’t expose gaps */
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
-  filter: saturate(0.98) contrast(1.02);
+
+  animation: slowPan 40s linear infinite;
 }
 
-/* Subtle overlay to avoid washed-out text */
+/* Very slow left drift */
+@keyframes slowPan {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-5%); }
+}
+
+/* Soft overlay for readability */
 .hero::after {
   content: "";
   position: absolute;
@@ -67,31 +80,30 @@ body {
   background: linear-gradient(
     180deg,
     rgba(29, 53, 87, 0.35) 0%,
-    rgba(29, 53, 87, 0.10) 45%,
+    rgba(29, 53, 87, 0.15) 50%,
     rgba(29, 53, 87, 0.45) 100%
   );
   pointer-events: none;
 }
 
-/* Name pinned top-left */
+/* Name top-left — larger now */
 .hero-name {
   position: absolute;
-  top: 18px;
-  left: 22px;
+  top: 22px;
+  left: 28px;
   z-index: 2;
 
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);  /* bigger, responsive */
   font-weight: 500;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
 
   color: var(--bg-primary);
   text-decoration: none;
 
-  padding: 0.45rem 0.65rem;
-  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
 
-  /* Glassy chip so it stays readable on any image */
   background: rgba(29, 53, 87, 0.35);
   border: 1px solid rgba(184, 193, 236, 0.35);
   backdrop-filter: blur(10px);
@@ -101,64 +113,18 @@ body {
   border-color: rgba(250, 212, 192, 0.6);
 }
 
-/* Responsive adjustments */
+/* Mobile tuning */
 @media (max-width: 768px) {
   .hero {
-    height: 52vh;
-    min-height: 360px;
+    height: 60vh;
+    min-height: 420px;
   }
 
   .hero-name {
-    top: 14px;
-    left: 14px;
-    font-size: 1rem;
+    top: 16px;
+    left: 16px;
+    font-size: 1.3rem;
   }
-}
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
-
-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
-}
-
-h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 400;
-  margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
-}
-
-h3 {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: var(--spacing-sm);
-  color: var(--text-primary);
-}
-
-p {
-  margin-bottom: var(--spacing-md);
-  color: var(--text-secondary);
-  font-size: 1rem;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease;
-  border-bottom: 1px solid transparent;
-}
-
-a:hover {
-  color: var(--warm-accent);
-  border-bottom: 1px solid var(--warm-accent);
 }
 
 /* ============================================
