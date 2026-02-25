@@ -36,24 +36,22 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-/* HERO COVER (image only) */
-/* ============================================
-   HERO COVER (full image visible + no awkward whitespace)
-   ============================================ */
-
-.hero-cover{
+header.hero#home{
   position: relative;
   height: 55vh;
   min-height: 480px;
   width: 100%;
   overflow: hidden;
-  background-color: var(--primary);
+
+  /* center the foreground image */
   display: grid;
   place-items: center;
+
+  background-color: var(--primary);
 }
 
-/* Blurred backdrop uses the same image to fill wide screens */
-.hero-cover::before{
+/* Use the SAME image as a blurred backdrop to remove side whitespace */
+header.hero#home::before{
   content:"";
   position:absolute;
   inset:0;
@@ -66,23 +64,23 @@ body {
   z-index: 0;
 }
 
-/* Soft dark overlay so name stays readable */
-.hero-cover::after{
+/* Dark overlay so text stays readable */
+header.hero#home::after{
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(
     180deg,
-    rgba(29, 53, 87, 0.35) 0%,
+    rgba(29, 53, 87, 0.32) 0%,
     rgba(29, 53, 87, 0.10) 55%,
-    rgba(29, 53, 87, 0.45) 100%
+    rgba(29, 53, 87, 0.42) 100%
   );
   z-index: 1;
   pointer-events:none;
 }
 
-/* Foreground image: show full image (no crop) */
-.hero-cover .hero-image{
+/* Foreground image: full image visible, no crop + faster motion */
+header.hero#home .hero-image{
   position: relative;
   z-index: 2;
 
@@ -91,25 +89,24 @@ body {
   object-fit: contain;
   display: block;
 
-  /* Gentle motion that doesn't "slide into blank space" */
-  animation: floatSubtle 5s ease-in-out infinite;
+  animation: floatLeft 3.5s ease-in-out infinite; /* faster */
 }
 
-@keyframes floatSubtle{
-  0%   { transform: translateX(0px); }
-  50%  { transform: translateX(-10px); }
-  100% { transform: translateX(0px); }
+@keyframes floatLeft{
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-18px); }
+  100% { transform: translateX(0); }
 }
 
-/* Name pinned top-left (fixes the "messed up" look) */
-.hero-name{
+/* Name: pinned top-left, bigger, and above overlays */
+header.hero#home .hero-name{
   position: absolute;
   top: 18px;
   left: 22px;
   z-index: 3;
 
   font-family: var(--font-display, system-ui);
-  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
   font-weight: 600;
   letter-spacing: 0.2px;
 
@@ -124,7 +121,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.hero-name:hover{
+header.hero#home .hero-name:hover{
   border-color: rgba(250, 212, 192, 0.65);
 }
 /* ============================================
