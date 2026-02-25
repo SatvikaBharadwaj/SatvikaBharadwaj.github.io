@@ -3,16 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background: #FAF9F6;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
-
 .hero-marquee {
   background: #FAF9F6;
 }
-
 .hero-top {
   display: flex;
   justify-content: space-between;
@@ -21,7 +18,6 @@ body {
   border-bottom: 1px solid #E6E2D9;
   gap: 40px;
 }
-
 .hero-name {
   color: #1D3557;
   font-weight: 400;
@@ -29,14 +25,12 @@ body {
   margin: 0;
   white-space: nowrap;
 }
-
 .hero-nav {
   display: flex;
   gap: 30px;
   list-style: none;
   margin-left: auto;
 }
-
 .hero-nav a {
   color: #1D3557;
   text-decoration: none;
@@ -46,12 +40,10 @@ body {
   border-bottom: 2px solid transparent;
   transition: 0.2s;
 }
-
 .hero-nav a:hover,
 .hero-nav a.active {
   border-bottom-color: #1D3557;
 }
-
 .marquee {
   height: 50vh;
   width: 100%;
@@ -61,19 +53,19 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .marquee-track {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: auto;
   animation: none;
+  gap: 0;
 }
-
 .marquee-track img {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: contain;
   padding: 20px;
+  flex-shrink: 0;
 }
 @keyframes scrollRight {
   from {
@@ -83,7 +75,6 @@ body {
     transform: translateX(-100vw);
   }
 }
-
 @media (max-width: 768px) {
   .hero-top {
     flex-direction: column;
@@ -91,22 +82,18 @@ body {
     gap: 15px;
     padding: 15px 20px;
   }
-
   .hero-name {
     font-size: 24px;
   }
-
   .hero-nav {
     gap: 15px;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 0;
   }
-
   .hero-nav a {
     font-size: 14px;
   }
-
   .marquee {
     height: 35vh;
   }
