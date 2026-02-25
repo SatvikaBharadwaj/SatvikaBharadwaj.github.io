@@ -4,31 +4,126 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Satvika Bharadwaj</title>
+
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 64px 20px; }
-    h1 { margin: 0 0 8px; font-size: 40px; }
-    p { line-height: 1.6; font-size: 18px; }
-    .links a { margin-right: 14px; }
-    .card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; margin-top: 22px; }
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #111827;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    nav {
+      margin-bottom: 48px;
+    }
+
+    nav a {
+      margin-right: 18px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 18px;
+      margin: 0 0 20px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 28px;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #d1d5db;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
   </style>
 </head>
+
 <body>
   <div class="wrap">
+    
     <h1>Satvika Bharadwaj</h1>
-    <p>Biomedical Engineering PhD candidate (Georgia Tech + Emory) working in computational pathology.</p>
+    <div class="subtitle">
+      PhD Candidate in Biomedical Engineering (Georgia Tech + Emory)  
+      Computational pathology • Machine learning • Translational oncology
+    </div>
 
-    <p class="links">
-      <a href="https://github.com/satvika">GitHub</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/resume.html">Resume</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/thoughts.html">Thoughts</a>
+      <a href="https://github.com/SatvikaBharadwaj">GitHub</a>
       <a href="https://www.linkedin.com/">LinkedIn</a>
       <a href="#">Google Scholar</a>
       <a href="assets/cv.pdf">CV (PDF)</a>
+    </nav>
+
+    <p>
+      I work at the intersection of histopathology, spatial biology, and predictive modeling, 
+      developing computational biomarkers for therapy stratification and clinical outcome prediction.
     </p>
 
     <div class="card">
-      <h2 style="margin:0 0 8px;">Featured project</h2>
-      <p style="margin:0;">DeSTIL: Spatial architecture of TILs for outcome prediction and therapy stratification in HER2+ breast cancer.</p>
+      <h2>Featured Project</h2>
+      <p>
+        <strong>DeSTIL</strong>: Quantifies the spatial architecture of tumor-infiltrating lymphocytes 
+        to identify patients who derive differential benefit from HER2-targeted therapies.
+      </p>
     </div>
+
+    <footer>
+      © 2026 Satvika Bharadwaj · Atlanta, GA
+    </footer>
+
   </div>
 </body>
 </html>
