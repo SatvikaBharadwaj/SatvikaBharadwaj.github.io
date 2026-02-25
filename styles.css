@@ -52,10 +52,10 @@ body {
 
 /* Full image visible */
 .hero-image {
-  height: 100%;
-  width: auto;              /* critical change */
-  object-fit: contain;      /* show entire image */
-  animation: slowPan 18s linear infinite;
+  object-fit: contain;  /* KEY: shows full image */
+  width: auto;          /* keeps aspect ratio */
+  height: 100%;         /* fit to hero height */
+  animation: slowPan 12s linear infinite;
 }
 
 /* Faster movement */
