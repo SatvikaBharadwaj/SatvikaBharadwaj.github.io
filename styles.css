@@ -52,6 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .marquee-track {
@@ -62,14 +63,26 @@ body {
   gap: 0;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .marquee-track img {
-  width: auto;
+  width: 50%;
   height: 100%;
   object-fit: contain;
   padding: 0px;
   flex-shrink: 0;
+  position: absolute;
+}
+
+.marquee-track img:first-child {
+  left: 0;
+  z-index: 1;
+}
+
+.marquee-track img:last-child {
+  right: 0;
+  z-index: 2;
 }
 @keyframes scrollRight {
   from {
