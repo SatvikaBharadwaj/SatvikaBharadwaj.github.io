@@ -63,7 +63,7 @@ body {
   display: flex;
   height: 100%;
   width: 200vw;
-  animation: scrollRight 6s linear infinite;
+  animation: scrollRight 10s linear infinite;
 }
 
 .marquee-track img {
