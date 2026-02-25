@@ -8,14 +8,28 @@
 </head>
 
 <body>
+  <!-- HERO -->
+  <header class="hero-marquee" id="home">
+    <!-- Top overlay (name left, nav right) -->
+    <div class="hero-top">
+      <a href="index.html" class="hero-name">Satvika Bharadwaj</a>
 
-<header class="hero-cover" id="home">
-  <a href="index.html" class="hero-name">Satvika Bharadwaj</a>
+      <nav class="hero-nav" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/research.html">Research</a>
+        <a href="pages/publications.html">Publications</a>
+        <a href="pages/contact.html">Contact</a>
+      </nav>
+    </div>
 
-  <img
-    class="hero-image"
-    src="pages/website_hero_section.png"
-    alt="Cover image"
-    loading="eager"
-  />
-</header>
+    <!-- Moving strip -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <img src="pages/CoverPicture.png" alt="" />
+        <img src="pages/CoverPicture.png" alt="" />
+      </div>
+    </div>
+  </header>
+</body>
+</html>
