@@ -39,92 +39,29 @@ body {
 /* ============================================
    HERO: half-page cover image + name top-left
    ============================================ */
-/* ============================================
-   HERO: half-page animated cover
-   ============================================ */
-
 .hero {
   position: relative;
-  height: 55vh;          /* slightly taller */
+  height: 55vh;
   min-height: 480px;
-  width: 100%;
   overflow: hidden;
   background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Animated image */
+/* Full image visible */
 .hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 110%;           /* slightly larger so movement doesn’t expose gaps */
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-
-  animation: slowPan 40s linear infinite;
+  width: auto;              /* critical change */
+  object-fit: contain;      /* show entire image */
+  animation: slowPan 18s linear infinite;
 }
 
-/* Very slow left drift */
+/* Faster movement */
 @keyframes slowPan {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-5%); }
-}
-
-/* Soft overlay for readability */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(29, 53, 87, 0.35) 0%,
-    rgba(29, 53, 87, 0.15) 50%,
-    rgba(29, 53, 87, 0.45) 100%
-  );
-  pointer-events: none;
-}
-
-/* Name top-left — larger now */
-.hero-name {
-  position: absolute;
-  top: 22px;
-  left: 28px;
-  z-index: 2;
-
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.2vw, 2rem);  /* bigger, responsive */
-  font-weight: 500;
-  letter-spacing: 0.5px;
-
-  color: var(--bg-primary);
-  text-decoration: none;
-
-  padding: 0.5rem 0.8rem;
-  border-radius: 12px;
-
-  background: rgba(29, 53, 87, 0.35);
-  border: 1px solid rgba(184, 193, 236, 0.35);
-  backdrop-filter: blur(10px);
-}
-
-.hero-name:hover {
-  border-color: rgba(250, 212, 192, 0.6);
-}
-
-/* Mobile tuning */
-@media (max-width: 768px) {
-  .hero {
-    height: 60vh;
-    min-height: 420px;
-  }
-
-  .hero-name {
-    top: 16px;
-    left: 16px;
-    font-size: 1.3rem;
-  }
+  100% { transform: translateX(-8%); }
 }
 
 /* ============================================
