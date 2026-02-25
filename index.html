@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Satvika Bharadwaj</title>
+  <title>Satvika Bharadwaj | Biomedical Engineer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <!-- HERO -->
   <header class="hero-marquee" id="home">
-    <!-- Top overlay (name left, nav right) -->
-    <div class="hero-top">
-      <a href="index.html" class="hero-name">Satvika Bharadwaj</a>
+    <!-- Moving image strip (background) -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <img src="pages/CoverPicture.png" alt="" />
+        <img src="pages/CoverPicture.png" alt="" />
+      </div>
+    </div>
 
+    <!-- Top overlay: Name on right -->
+    <div class="hero-top">
+      <div class="hero-name-section">
+        <h1 class="hero-name">Satvika<br/>Bharadwaj</h1>
+      </div>
+      
+      <!-- Navigation -->
       <nav class="hero-nav" aria-label="Primary">
         <a href="index.html" class="active">Home</a>
         <a href="pages/about.html">About</a>
@@ -21,14 +31,6 @@
         <a href="pages/publications.html">Publications</a>
         <a href="pages/contact.html">Contact</a>
       </nav>
-    </div>
-
-    <!-- Moving strip -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <img src="pages/CoverPicture.png" alt="" />
-        <img src="pages/CoverPicture.png" alt="" />
-      </div>
     </div>
   </header>
 </body>
