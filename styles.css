@@ -4,28 +4,19 @@
    ============================================ */
 
 :root {
-  /* Soft pastel palette */
-  --bg-primary: #fafaf8;      /* Warm off-white */
-  --bg-secondary: #f5f3f0;    /* Soft beige */
-  --text-primary: #2c2c2a;    /* Warm dark gray */
-  --text-secondary: #6b6b68;  /* Muted gray */
-  --accent: #6fb3b8;          /* Soft teal - the pop */
-  --accent-light: #e8f4f5;    /* Very light teal bg */
-  --border: #e8e6e3;          /* Soft border color */
+  /* Vibrant pastel palette with navy text */
+  --bg-primary: #fff5f7;      /* Soft pink background */
+  --bg-secondary: #fff0e6;    /* Soft peach background */
+  --text-primary: #1a1a3e;    /* Navy blue - main text */
+  --text-secondary: #4a4a6e;  /* Muted dark purple */
+  --accent: #ff6b9d;          /* Vibrant pastel pink - the pop */
+  --accent-light: #ffe0ec;    /* Light pink for backgrounds */
+  --border: #f0d9e8;          /* Soft pink border */
   --success: #a8d5ba;         /* Soft sage green */
   --warning: #f4d4c4;         /* Soft peach */
-  
-  /* Typography */
-  --font-display: 'Georgia', 'Garamond', serif;
-  --font-body: 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
-  --font-mono: 'Courier New', monospace;
-  
-  /* Spacing & sizing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
+  --color-purple: #c9a0dc;    /* Pastel purple accent */
+  --color-blue: #a4c8e1;      /* Pastel blue accent */
+  --color-yellow: #ffd89b;    /* Pastel yellow accent */
 }
 
 * {
