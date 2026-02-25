@@ -1,129 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Satvika Bharadwaj</title>
-
-  <style>
-    :root {
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --accent: #111827;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: var(--text);
-    }
-
-    .wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    h1 {
-      margin: 0 0 6px;
-      font-size: 42px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-    }
-
-    .subtitle {
-      font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-
-    nav {
-      margin-bottom: 48px;
-    }
-
-    nav a {
-      margin-right: 18px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    p {
-      line-height: 1.7;
-      font-size: 18px;
-      margin: 0 0 20px;
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-      margin-top: 28px;
-      transition: all 0.2s ease;
-    }
-
-    .card:hover {
-      border-color: #d1d5db;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-    }
-
-    .card h2 {
-      margin: 0 0 8px;
-      font-size: 20px;
-    }
-
-    footer {
-      margin-top: 80px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satvika Bharadwaj | Biomedical Engineer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="wrap">
-    
-    <h1>Satvika Bharadwaj</h1>
-    <div class="subtitle">
-      PhD Candidate in Biomedical Engineering (Georgia Tech + Emory)  
-      Computational pathology • Machine learning • Translational oncology
-    </div>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="/resume.html">Resume</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/thoughts.html">Thoughts</a>
-      <a href="https://github.com/SatvikaBharadwaj">GitHub</a>
-      <a href="https://www.linkedin.com/">LinkedIn</a>
-      <a href="#">Google Scholar</a>
-      <a href="assets/cv.pdf">CV (PDF)</a>
-    </nav>
-
-    <p>
-      I work at the intersection of histopathology, spatial biology, and predictive modeling, 
-      developing computational biomarkers for therapy stratification and clinical outcome prediction.
-    </p>
-
-    <div class="card">
-      <h2>Featured Project</h2>
-      <p>
-        <strong>DeSTIL</strong>: Quantifies the spatial architecture of tumor-infiltrating lymphocytes 
-        to identify patients who derive differential benefit from HER2-targeted therapies.
-      </p>
-    </div>
-
-    <footer>
-      © 2026 Satvika Bharadwaj · Atlanta, GA
-    </footer>
-
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">SB</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/research.html">Research</a></li>
+      <li><a href="pages/publications.html">Publications</a></li>
+      <li><a href="pages/skills.html">Skills</a></li>
+      <li><a href="pages/fun-facts.html">Fun Facts</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle">☰</button>
   </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Hello! I'm <span class="hero-accent">Satvika</span></h1>
+      <p>PhD in <span class="hero-accent">Biomedical Engineering</span> passionate about building solutions that bridge medicine and technology. Exploring opportunities in industry and academia.</p>
+      
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="pages/about.html" class="btn">Learn About Me</a>
+        <a href="pages/contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK SNAPSHOT -->
+<section>
+  <div class="container">
+    <h2>What I Do</h2>
+    <div class="card-grid">
+      
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🔬</div>
+          <div>
+            <h3 class="card-title">Research</h3>
+            <p class="card-description">Designing innovative biomedical solutions through experimentation and analysis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">💻</div>
+          <div>
+            <h3 class="card-title">Development</h3>
+            <p class="card-description">Building tools, simulations, and software to advance biomedical engineering</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">🎯</div>
+          <div>
+            <h3 class="card-title">Problem Solving</h3>
+            <p class="card-description">Tackling complex medical and engineering challenges with creative approaches</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section>
+  <div class="container">
+    <h2>Recent Highlights</h2>
+    
+    <div class="card-grid">
+      
+      <div class="card">
+        <h3>📊 Latest Project</h3>
+        <p>Brief description of your most recent research or project. What made it exciting? What did you learn?</p>
+        <a href="pages/research.html">Read more →</a>
+      </div>
+
+      <div class="card">
+        <h3>📝 Published Work</h3>
+        <p>Link to your latest publication or conference presentation. You can highlight key findings here.</p>
+        <a href="pages/publications.html">View all publications →</a>
+      </div>
+
+      <div class="card">
+        <h3>🛠️ Skills & Tools</h3>
+        <p>Overview of your technical expertise: software, lab techniques, and methodologies you've mastered.</p>
+        <a href="pages/skills.html">See my skills →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="social-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">💼</a>
+      <a href="https://github.com/SatvikaBharadwaj" target="_blank" title="GitHub">🔗</a>
+      <a href="mailto:your.email@example.com" title="Email">✉️</a>
+      <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">𝕏</a>
+    </div>
+    <p>&copy; 2025 Satvika Bharadwaj. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
