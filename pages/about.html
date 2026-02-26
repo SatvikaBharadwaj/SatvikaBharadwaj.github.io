@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Satvika Bharadwaj</title>
-  <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Satvika Bharadwaj</title>
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-
   <header class="hero-marquee">
     <div class="hero-top">
       <h1 class="hero-name">Satvika Bharadwaj</h1>
@@ -21,91 +20,31 @@
     </div>
   </header>
 
-<!-- MAIN CONTENT -->
-<section>
-  <div class="container">
-    <h1>About Me</h1>
-    
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-bottom: 3rem;">
-      <div>
-        <h2>My Journey</h2>
-        <p>
-          I am a PhD candidate in Biomedical Engineering at Georgia Institute of Technology and Emory University, working in the <a href="https://med.emory.edu/departments/radiology/research/research-labs/madabhushi-lab/index.html" target="_blank">Madabhushi Lab</a>. My research focuses on developing clinically grounded machine learning methods for medical imaging, spanning computational pathology and radiology.
-        </p>
-        <p>
-          I build image-based biomarkers for diagnosis, therapy response and survival prediction, with models validated on multi-institutional, clinical trial cohorts to support translational oncology. My work has been published in <a href="https://pubmed.ncbi.nlm.nih.gov/39934323/" target="_blank">Nature Reviews Clinical Oncology</a> and the <a href="https://academic.oup.com/jbmrplus/article/9/4/ziaf028/8006380?login=false" target="_blank">Journal of Bone and Mineral Research Plus</a>.
-        </p>
-        <p>
-          Prior to my PhD, I worked as a Radiology Imaging Fellow at the Indian Institute of Science, developing 3D ultrasound reconstruction for underserved communities. I hold an MEng from the University of Cincinnati and a BE from M.S. Ramaiah Institute of Technology.
-        </p>
-      </div>
+  <section class="detail-page">
+    <div class="section-inner">
+      <h2 class="section-title">About</h2>
 
-      <div style="background-color: #e8f4f5; padding: 2rem; border-radius: 8px;">
-        <h3>Quick Facts</h3>
-        <ul style="list-style: none; line-height: 2;">
-          <li>🎓 <strong>PhD Candidate</strong> - Biomedical Engineering (GPA: 4.0/4.0)</li>
-          <li>🏫 <strong>Institution</strong> - Georgia Tech &amp; Emory University</li>
-          <li>🔬 <strong>Research Focus</strong> - Computational Pathology &amp; Radiology</li>
-          <li>💡 <strong>Passionate about</strong> - Translational AI for oncology</li>
-          <li>🌍 <strong>Based in</strong> - Atlanta, GA</li>
-        </ul>
+      <a href="Resume_SatvikaBharadwaj_ML_2026.pdf" target="_blank" class="cv-link">Download CV (PDF)</a>
+
+      <div class="detail-body">
+        <p>I'm a PhD candidate in <a href="https://med.emory.edu/departments/radiology/research/research-labs/madabhushi-lab/index.html" target="_blank">Madabhushi Lab</a> at Georgia Institute of Technology and Emory University. My research focuses on developing clinically machine learning tools for medical imaging. My work has been published in <a href="https://pubmed.ncbi.nlm.nih.gov/39934323/" target="_blank">Nature Reviews Clinical Oncology</a> and the <a href="https://academic.oup.com/jbmrplus/article/9/4/ziaf028/8006380?login=false" target="_blank"> Journal of Bone and Mineral Research Plus</a>. Prior to joining my PhD, I worked on radiology projects at the Indian Institute of Science, where I developed 3D ultrasound reconstruction algorithms. I also worked on biomedical signal processing at a healthcare startup in Bangalore, India. I hold a Master of Engineering from the University of Cincinnati and a Bachelor of Engineering from M.S. Ramaiah Institute of Technology.</p>
+
+        <p>I'm interested in how structure reveals meaning. In biology, structure often appears in images: patterns of cells, spatial organization, and subtle architectural differences that carry prognostic value. My work centers on translating those patterns into measurable signals that can inform treatment decisions while remaining grounded in biology.</p>
+
+        <div class="ikigai-section">
+          <div class="ikigai-book">
+            <a href="https://www.penguinrandomhouse.com/books/549469/ikigai-by-hector-garcia-and-francesc-miralles/" target="_blank">
+              <img src="https://images4.penguinrandomhouse.com/cover/9780143130727" alt="Ikigai: The Japanese Secret to a Long and Happy Life" />
+            </a>
+          </div>
+          <div class="ikigai-text">
+            <p>I'm drawn to problems where methodological rigor matters. External validation, calibration, and clinical utility matter more to me than marginal gains in performance metrics. The Japanese concept of Ikigai beautifully explained in <a href="https://www.penguinrandomhouse.com/books/549469/ikigai-by-hector-garcia-and-francesc-miralles/" target="_blank"><em>Ikigai: The Japanese Secret to a Long and Happy Life</em></a> resonated with me. The idea of aligning what you enjoy, what you do well, and what creates real value to the society felt deeply relatable. It shaped how I think about building work that is both technically rigorous and practically useful.</p>
+          </div>
+        </div>
+
+        <p>My path has moved across signal processing, medical imaging systems, and large multi-site datasets, but the motivation remains consistent: build systems that are clear, robust, and useful. I enjoy designing feature pipelines and survival modeling frameworks. Outside the lab, I like to read, cook South Indian food and occasionally paint and sing Carnatic songs.</p>
       </div>
     </div>
-
-    <div class="divider"></div>
-
-    <!-- RESEARCH INTERESTS -->
-    <h2 style="margin-top: 3rem;">Research Interests</h2>
-    <div class="card-grid">
-      
-      <div class="card">
-        <h3>🧬 Computational Pathology</h3>
-        <p>Developing image-based biomarkers from digitized histopathology slides for diagnosis, therapy response prediction, and survival analysis in oncology.</p>
-      </div>
-
-      <div class="card">
-        <h3>🩺 Translational AI for Oncology</h3>
-        <p>Building and validating machine learning models on multi-institutional clinical trial data (NSABP, ECOG, SWOG) to support clinical decision-making in cancer care.</p>
-      </div>
-
-      <div class="card">
-        <h3>🔧 Medical Image Analysis</h3>
-        <p>Designing deep learning pipelines for automated segmentation, morphological feature extraction, and 3D image reconstruction across radiology and pathology.</p>
-      </div>
-
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- APPROACH -->
-    <h2 style="margin-top: 3rem;">My Approach</h2>
-    <div class="card">
-      <h3>How I Work</h3>
-      <p>
-        I believe great biomedical engineering comes from <strong>collaboration, creativity, and a deep understanding of clinical needs</strong>. My approach combines rigorous experimental methodology with innovative thinking. I'm comfortable with ambiguity, adaptable when things don't go as planned, and always excited to learn from colleagues and mentors.
-      </p>
-      <p>
-        Whether I'm in the lab, analyzing data, or communicating findings, I prioritize clarity, reproducibility, and impact.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/satvikabharadwaj/" target="_blank" title="LinkedIn">💼</a>
-      <a href="https://github.com/SatvikaBharadwaj" target="_blank" title="GitHub">🔗</a>
-      <a href="mailto:sbhar23@emory.edu" title="Email">✉️</a>
-      <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">𝕏</a>
-    </div>
-    <p>&copy; 2025 Satvika Bharadwaj. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="../script.js"></script>
-
+  </section>
 </body>
 </html>
