@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:scholar.google.com)",
-      "WebFetch(domain:doi.org)"
+      "WebFetch(domain:doi.org)",
+      "WebFetch(domain:link.springer.com)",
+      "WebFetch(domain:ieeexplore.ieee.org)",
+      "WebFetch(domain:www.spiedigitallibrary.org)",
+      "WebFetch(domain:www.harpercollins.com)",
+      "WebFetch(domain:harpercollins.co.uk)",
+      "WebFetch(domain:www.panmacmillan.com)",
+      "WebFetch(domain:www.leadstartcorp.com)",
+      "WebFetch(domain:us.macmillan.com)",
+      "WebFetch(domain:www.googleapis.com)",
+      "WebFetch(domain:app.thestorygraph.com)"
     ]
   }
 }
